@@ -1,6 +1,8 @@
 # Flutter Trip Application Design
 
-A new Flutter Trip Application Design.
+Flutter Trip Application UI/UX design - day 2 Flutter Animation and UI Design.
+
+- [UI Design- Day 1](https://github.com/afgprogrammer/flutter-inspiration-app-ui)
 
 ## ScreenShot
 
