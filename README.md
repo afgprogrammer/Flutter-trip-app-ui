@@ -1,6 +1,6 @@
-# day2_trip
+# Flutter Trip Application Design
 
-A new Flutter project.
+A new Flutter Trip Application Design.
 
 ## Getting Started
 
