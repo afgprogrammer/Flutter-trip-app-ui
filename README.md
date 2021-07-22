@@ -20,7 +20,6 @@ class Day2 extends Flutter100DaysOfCode {
 [Checkout my Youtube channel](https://youtube.com/afgprogrammer)
 
 
-<br><br>
 ## Development Setup
 Clone the repository and run the following commands:
 ```
