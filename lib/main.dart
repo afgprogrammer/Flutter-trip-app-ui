@@ -1,4 +1,4 @@
-import 'package:day2_trip/FadeAnimation.dart';
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(
@@ -15,7 +15,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin {
-  PageController _pageController;
+  late PageController _pageController;
   int totalPage = 4;
 
   void _onScroll() {
@@ -46,25 +46,25 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
             page: 1,
             image: 'assets/images/one.jpg',
             title: 'Yosemite National Park',
-            description: 'Yosemite National Park is in California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoia trees, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.'
+            description: 'Yosemite National Park is in California’s Sierra Nevada mountains.'
           ),
           makePage(
             page: 2,
             image: 'assets/images/two.jpg',
             title: 'Golden Gate Bridge',
-            description: 'The Golden Gate Bridge is a suspension bridge spanning the Golden Gate, the one-mile-wide strait connecting San Francisco Bay and the Pacific Ocean.'
+            description: 'The Golden Gate Bridge is a suspension bridge spanning the Golden Gate, the one-mile-wide strait.'
           ),
           makePage(
             page: 3,
             image: 'assets/images/three.jpg',
             title: 'Sedona',
-            description: "Sedona is regularly described as one of America's most beautiful places. Nowhere else will you find a landscape as dramatically colorful."
+            description: "Sedona is regularly described as one of America's most beautiful places."
           ),
           makePage(
             page: 4,
             image: 'assets/images/four.jpg',
             title: 'Savannah',
-            description: "Savannah, with its Spanish moss, Southern accents and creepy graveyards, is a lot like Charleston, South Carolina. But this city about 100 miles to the south has an eccentric streak."
+            description: "Savannah, with its Spanish moss, Southern accents and creepy graveyards, is a lot like Charleston, South Carolina."
           ),
         ],
       ),
@@ -103,7 +103,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                 crossAxisAlignment: CrossAxisAlignment.baseline,
                 textBaseline: TextBaseline.alphabetic,
                 children: <Widget>[
-                  FadeAnimation(2, Text(page.toString(), style: TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold),)),
+                  FadeInUp(child: Text(page.toString(), style: TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold),)),
                   Text('/' + totalPage.toString(), style: TextStyle(color: Colors.white, fontSize: 15),)
                 ],
               ),
@@ -112,13 +112,13 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    FadeAnimation(1,
+                    FadeInUp(child:
                       Text(title, style: TextStyle(color: Colors.white, fontSize: 50, height: 1.2, fontWeight: FontWeight.bold),)
                     ),
                     SizedBox(
                       height: 20,
                     ),
-                    FadeAnimation(1.5, Row(
+                    FadeInUp(child: Row(
                       children: <Widget>[
                         Container(
                           margin: EdgeInsets.only(right: 3),
@@ -147,12 +147,12 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                     SizedBox(
                       height: 20,
                     ),
-                    FadeAnimation(2, Padding(
+                    FadeInUp(child: Padding(
                       padding: const EdgeInsets.only(right: 50),
                       child: Text(description, style: TextStyle(color: Colors.white.withOpacity(.7), height: 1.9, fontSize: 15),),
                     )),
                     SizedBox(height: 20,),
-                    FadeAnimation(2.5, Text('READ MORE', style: TextStyle(color: Colors.white),)),
+                    FadeInUp(child: Text('READ MORE', style: TextStyle(color: Colors.white),)),
                     SizedBox(height: 30,),
                   ],
                 ),
